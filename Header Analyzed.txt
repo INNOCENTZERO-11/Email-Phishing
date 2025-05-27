@@ -1,0 +1,531 @@
+Header Analyzed
+Email Subject: Detected unusual login activity on your online banking account
+Delivery Information
+Problem Icon DMARC Compliant
+Ok Icon SPF Alignment
+Ok Icon SPF Authenticated
+Ok Icon DKIM Alignment
+Ok Icon DKIM Authenticated
+Relay Information
+Received Delay:	1 seconds
+
+Hop	Delay	From	By	With	Time (UTC)	Blacklist
+1	*	mail-sor-f41.google.com 209.85.220.41	mx.google.com	SMTPS	5/27/2025 12:52:10 PM	Not blacklisted
+2	1 Second		2002:a05:7301:5f16:b0:174:3503:3a2c	SMTP	5/27/2025 12:52:11 PM	
+
+
+SPF and DKIM Information
+dmarc:gmail.com   
+v=DMARC1; p=none; sp=quarantine; rua=mailto:mailauth-reports@google.com
+spf:gmail.com:209.85.220.41   
+v=spf1 redirect=_spf.google.com
+dkim:gmail.com:20230601  
+Dkim Public Record:
+v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAntvSKT1hkqhKe0xcaZ0x+QbouDsJuBfby/S82jxsoC/SodmfmVs2D1KAH3mi1AqdMdU12h2VfETeOJkgGYq5ljd996AJ7ud2SyOLQmlhaNHH7Lx+Mdab8/zDN1SdxPARDgcM7AsRECHwQ15R20FaKUABGu4NTbR2fDKnYwiq5jQyBkLWP+LgGOgfUF4T4HZb2PY2bQtEP6QeqOtcW4rrsH24L7XhD+HSZb1hsitrE0VPbhJzxDwI4JF815XMnSVjZgYUXP8CxI1Y0FONlqtQYgsorZ9apoW1KPQe8brSSlRsi9sXB/tu56LmG7tEDNmrZ5XUwQYUUADBOu7t1niwXwIDAQAB
+Dkim Signature:
+v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20230601; t=1748350330; x=1748955130; dara=google.com; h=to:subject:message-id:date:from:mime-version:from:to:cc:subject :date:message-id:reply-to; bh=+R7fI38etDSIz9fUpmmj1GKAVQs0LYn2gz4zvCe2VHQ=; b=Ci1oshW8HpQVfgkPzrG3BfxKAUox5LWcOt/2x9dGp2GmtCmfqHbMfZZXJP7yfXDl0d VDTT5x0S99BGQHHgFu3qXXmUwBenXVX/oNXalKUJUcE0I1bU01ea0Yr3dVqJOXtxXeDa 8gofn0/JfaChUJwuH3CFFvfGq6W5WZSnEYd1I5f8r06x7sNKlP//ZzLngThfsMnfcuGS I6XJdPRC0GwdKSOXrG+ABVEWLOaZARqlEAyq0IsCD/AQP69/2RzyxKPgY5L50rQYkVyM x0pVEfN/ozoQtHsahgt6O7EQuhSkerVC2Q4kgIMG0OFMXHixO5cPhvl3ASuiFsoYbMgv nkXw==
+Headers Found
+Header Name	Header Value
+Delivered-To	aditay.kamble@gmail.com
+X-Received	by 2002:a17:907:1b02:b0:aca:c38d:fef0 with SMTP id a640c23a62f3a-ad85aec3ac5mr1127089266b.0.1748350330775; Tue, 27 May 2025 05:52:10 -0700 (PDT)
+ARC-Seal	i=1; a=rsa-sha256; t=1748350330; cv=none; d=google.com; s=arc-20240605; b=agZmhKNDNZJqvDKtkHbtJA0UEw69fLJsGC82Vrj0e3wVJMHAqxGxXg+7tad+H3alpm gacAOl2eYMDK6BY3h4/YWTgsqsYF6gsBQjkUMEZmizkf5DeSMCeCcPlV/CRIdEk1wS7E hrb1NxqxaakKSn/xx63JGnMAjcMdNzDh3iVVeSUZjwsAl3Lpyed8Pfj/uIQfnlFGgjMF h56iRK4cyiWZecDLbP7cfo7C2gFE8pnpbR2d6qjJxcVVi/mJqIdmHK6/Vjs8HCmhVfwv AoYsMf5g/NFDwhHR/LNFl+UXeStHaXvewA87T8HMjbH6OkqUL70QLgi2QZ6KOeJvVrGf 1gRA==
+ARC-Message-Signature	i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605; h=to:subject:message-id:date:from:mime-version:dkim-signature; bh=+R7fI38etDSIz9fUpmmj1GKAVQs0LYn2gz4zvCe2VHQ=; fh=ZWiZFrQLwoMn5Iws1/JDwg56Sw5rR/tsI48PYpphxq4=; b=AXa2QdzGoIcWXfxhrWC70xxDkIdlbzWZ7qsuT/uo0dZeP97iJ28q7vSdpv7Hos7nI6 LtkDDhK/SKn9qCW+AIs0IBL8WjoQeLFe6kbSIyxpYZtjkSjOmP3KoQ0A0nQ67AJ2gKZu xSzBTIIE0HNt6/ZNoMjMRxsygMsj7kL5B2kKsKdFdk4QffN0WZRzRxpYUEk0LOciCd9x 0P77WK+MbaaHANbff7jlOyXPGAUj58oQeIUlVBo7iaLBisqZrvrllpBLeLJCUxBaazgH TgdCGXVk3tYRLi1YBaPMQWEXqaRaOUamSleck8UhSsR9fQndbbsrXqbGLbQFXHUXQyny in0g==; dara=google.com
+ARC-Authentication-Results	i=1; mx.google.com; dkim=pass header.i=@gmail.com header.s=20230601 header.b=Ci1oshW8; spf=pass (google.com: domain of musicbyaviax.11@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=musicbyaviax.11@gmail.com; dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com; dara=pass header.i=@gmail.com
+Return-Path	<musicbyaviax.11@gmail.com>
+Received-SPF	pass (google.com: domain of musicbyaviax.11@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results	mx.google.com; dkim=pass header.i=@gmail.com header.s=20230601 header.b=Ci1oshW8; spf=pass (google.com: domain of musicbyaviax.11@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=musicbyaviax.11@gmail.com; dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com; dara=pass header.i=@gmail.com
+DKIM-Signature	v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20230601; t=1748350330; x=1748955130; dara=google.com; h=to:subject:message-id:date:from:mime-version:from:to:cc:subject :date:message-id:reply-to; bh=+R7fI38etDSIz9fUpmmj1GKAVQs0LYn2gz4zvCe2VHQ=; b=Ci1oshW8HpQVfgkPzrG3BfxKAUox5LWcOt/2x9dGp2GmtCmfqHbMfZZXJP7yfXDl0d VDTT5x0S99BGQHHgFu3qXXmUwBenXVX/oNXalKUJUcE0I1bU01ea0Yr3dVqJOXtxXeDa 8gofn0/JfaChUJwuH3CFFvfGq6W5WZSnEYd1I5f8r06x7sNKlP//ZzLngThfsMnfcuGS I6XJdPRC0GwdKSOXrG+ABVEWLOaZARqlEAyq0IsCD/AQP69/2RzyxKPgY5L50rQYkVyM x0pVEfN/ozoQtHsahgt6O7EQuhSkerVC2Q4kgIMG0OFMXHixO5cPhvl3ASuiFsoYbMgv nkXw==
+X-Google-DKIM-Signature	v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net; s=20230601; t=1748350330; x=1748955130; h=to:subject:message-id:date:from:mime-version:x-gm-message-state :from:to:cc:subject:date:message-id:reply-to; bh=+R7fI38etDSIz9fUpmmj1GKAVQs0LYn2gz4zvCe2VHQ=; b=LzIuE3i4yOkh2YUnmz6X+WJxMMihXChDfew6sAeBGnBD6B4px0yD0ByO8UyiWzmD5T 0W3latOnxCcNxF8Ni3ab2drLIibYNpW060LNq2aQ7X43ndGhaH8TZPXGxm3rjCaCmGLd ZL1jlFmfBUWL2aCZ+ptBcXWrncA37o0Lmj1XrMTt0n8Ed4KaP5pAFz+75DIdsjC8ltut HfG5mIzvg5onyRdIAL4hXmw4TP4Gsc+vwv9wQwj/QqXpOzw3fbT6GRZVThEjDpaxNgl/ B9k2fscUo1rol+Kjd272A0WkKc/KbjKcc59KVALystKc5+FYMH80LwSeyNAJTV5x23pk B2KQ==
+X-Gm-Message-State	AOJu0YxW/59Fpjp2q7X3qMGEog+n7tdQ7ffm5n+SIo/9nr/Tel/nyS30 kuKCAeXKAShtKWNdbYYw9AMvLw3I8rzN5WaGXhzrKd+NjLECbg69yjqVVpmVImNhIy6fbSDsuhY NOdrpP8kyy+l1HsGSXVgRZdH93eoUC65dMzAq
+X-Gm-Gg	ASbGncteDERAywauhCi3w2DO8H8XK8VZ8YRtM5sajLwki0Mn0Lf4zO/Fs9cx8Abd3rF EE0i6AnTzs7irfKZ8OrFWxPP3Rkcvg1vdztoEwdmhHf1HJLXIYGD+UQtpVNTMOFDEt9DOoZya52 zwFKqHN7C2tzM0h0pdgaNbQ2gKJkah2T4z/DcRx/1dQY24gRfy9WHA4NXl4QnQX5u97Mjop6UFE 8vuAA==
+X-Google-Smtp-Source	AGHT+IHBfRubDojTHV/ee3AHLqv3p8kTmZ2yF627JkEeHT/bApr7x3Jd9n1WKwy8WinlpvD0/Y86/nLoHDrYHf4Mix4=
+MIME-Version	1.0
+From	aviax music <musicbyaviax.11@gmail.com>
+Date	Tue, 27 May 2025 18:21:58 +0530
+X-Gm-Features	AX0GCFuDfQG2dJWqL6CR5sQ1zLg17fTWW-a_em8sOTZkdqlROCDDsvC-2VSMu5Q
+Message-ID	<CAFP+6-9RLowJnyNdMb+v1ZsFp5L2z87tEFoiePC08Lk0=aDLNA@mail.gmail.com>
+Subject	Detected unusual login activity on your online banking account
+To	aditay.kamble@gmail.com
+Content-Type	multipart/alternative; boundary="0000000000005994eb06361d88c8"
+Received Header
+Delivered-To: aditay.kamble@gmail.com
+Received: by 2002:a05:7301:5f16:b0:174:3503:3a2c with SMTP id tw22csp2146354dyc;
+        Tue, 27 May 2025 05:52:11 -0700 (PDT)
+X-Received: by 2002:a17:907:1b02:b0:aca:c38d:fef0 with SMTP id a640c23a62f3a-ad85aec3ac5mr1127089266b.0.1748350330775;
+        Tue, 27 May 2025 05:52:10 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1748350330; cv=none;
+        d=google.com; s=arc-20240605;
+        b=agZmhKNDNZJqvDKtkHbtJA0UEw69fLJsGC82Vrj0e3wVJMHAqxGxXg+7tad+H3alpm
+         gacAOl2eYMDK6BY3h4/YWTgsqsYF6gsBQjkUMEZmizkf5DeSMCeCcPlV/CRIdEk1wS7E
+         hrb1NxqxaakKSn/xx63JGnMAjcMdNzDh3iVVeSUZjwsAl3Lpyed8Pfj/uIQfnlFGgjMF
+         h56iRK4cyiWZecDLbP7cfo7C2gFE8pnpbR2d6qjJxcVVi/mJqIdmHK6/Vjs8HCmhVfwv
+         AoYsMf5g/NFDwhHR/LNFl+UXeStHaXvewA87T8HMjbH6OkqUL70QLgi2QZ6KOeJvVrGf
+         1gRA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=+R7fI38etDSIz9fUpmmj1GKAVQs0LYn2gz4zvCe2VHQ=;
+        fh=ZWiZFrQLwoMn5Iws1/JDwg56Sw5rR/tsI48PYpphxq4=;
+        b=AXa2QdzGoIcWXfxhrWC70xxDkIdlbzWZ7qsuT/uo0dZeP97iJ28q7vSdpv7Hos7nI6
+         LtkDDhK/SKn9qCW+AIs0IBL8WjoQeLFe6kbSIyxpYZtjkSjOmP3KoQ0A0nQ67AJ2gKZu
+         xSzBTIIE0HNt6/ZNoMjMRxsygMsj7kL5B2kKsKdFdk4QffN0WZRzRxpYUEk0LOciCd9x
+         0P77WK+MbaaHANbff7jlOyXPGAUj58oQeIUlVBo7iaLBisqZrvrllpBLeLJCUxBaazgH
+         TgdCGXVk3tYRLi1YBaPMQWEXqaRaOUamSleck8UhSsR9fQndbbsrXqbGLbQFXHUXQyny
+         in0g==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Ci1oshW8;
+       spf=pass (google.com: domain of musicbyaviax.11@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=musicbyaviax.11@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <musicbyaviax.11@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a640c23a62f3a-ad87712b2easor246321466b.14.2025.05.27.05.52.10
+        for <aditay.kamble@gmail.com>
+        (Google Transport Security);
+        Tue, 27 May 2025 05:52:10 -0700 (PDT)
+Received-SPF: pass (google.com: domain of musicbyaviax.11@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Ci1oshW8;
+       spf=pass (google.com: domain of musicbyaviax.11@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=musicbyaviax.11@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1748350330; x=1748955130; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=+R7fI38etDSIz9fUpmmj1GKAVQs0LYn2gz4zvCe2VHQ=;
+        b=Ci1oshW8HpQVfgkPzrG3BfxKAUox5LWcOt/2x9dGp2GmtCmfqHbMfZZXJP7yfXDl0d
+         VDTT5x0S99BGQHHgFu3qXXmUwBenXVX/oNXalKUJUcE0I1bU01ea0Yr3dVqJOXtxXeDa
+         8gofn0/JfaChUJwuH3CFFvfGq6W5WZSnEYd1I5f8r06x7sNKlP//ZzLngThfsMnfcuGS
+         I6XJdPRC0GwdKSOXrG+ABVEWLOaZARqlEAyq0IsCD/AQP69/2RzyxKPgY5L50rQYkVyM
+         x0pVEfN/ozoQtHsahgt6O7EQuhSkerVC2Q4kgIMG0OFMXHixO5cPhvl3ASuiFsoYbMgv
+         nkXw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1748350330; x=1748955130;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=+R7fI38etDSIz9fUpmmj1GKAVQs0LYn2gz4zvCe2VHQ=;
+        b=LzIuE3i4yOkh2YUnmz6X+WJxMMihXChDfew6sAeBGnBD6B4px0yD0ByO8UyiWzmD5T
+         0W3latOnxCcNxF8Ni3ab2drLIibYNpW060LNq2aQ7X43ndGhaH8TZPXGxm3rjCaCmGLd
+         ZL1jlFmfBUWL2aCZ+ptBcXWrncA37o0Lmj1XrMTt0n8Ed4KaP5pAFz+75DIdsjC8ltut
+         HfG5mIzvg5onyRdIAL4hXmw4TP4Gsc+vwv9wQwj/QqXpOzw3fbT6GRZVThEjDpaxNgl/
+         B9k2fscUo1rol+Kjd272A0WkKc/KbjKcc59KVALystKc5+FYMH80LwSeyNAJTV5x23pk
+         B2KQ==
+X-Gm-Message-State: AOJu0YxW/59Fpjp2q7X3qMGEog+n7tdQ7ffm5n+SIo/9nr/Tel/nyS30 kuKCAeXKAShtKWNdbYYw9AMvLw3I8rzN5WaGXhzrKd+NjLECbg69yjqVVpmVImNhIy6fbSDsuhY NOdrpP8kyy+l1HsGSXVgRZdH93eoUC65dMzAq
+X-Gm-Gg: ASbGncteDERAywauhCi3w2DO8H8XK8VZ8YRtM5sajLwki0Mn0Lf4zO/Fs9cx8Abd3rF EE0i6AnTzs7irfKZ8OrFWxPP3Rkcvg1vdztoEwdmhHf1HJLXIYGD+UQtpVNTMOFDEt9DOoZya52 zwFKqHN7C2tzM0h0pdgaNbQ2gKJkah2T4z/DcRx/1dQY24gRfy9WHA4NXl4QnQX5u97Mjop6UFE 8vuAA==
+X-Google-Smtp-Source: AGHT+IHBfRubDojTHV/ee3AHLqv3p8kTmZ2yF627JkEeHT/bApr7x3Jd9n1WKwy8WinlpvD0/Y86/nLoHDrYHf4Mix4=
+X-Received: by 2002:a17:907:9723:b0:ad5:57e0:c3b1 with SMTP id a640c23a62f3a-ad85b0e0ef2mr1147371466b.23.1748350329786; Tue, 27 May 2025 05:52:09 -0700 (PDT)
+MIME-Version: 1.0
+From: aviax music <musicbyaviax.11@gmail.com>
+Date: Tue, 27 May 2025 18:21:58 +0530
+X-Gm-Features: AX0GCFuDfQG2dJWqL6CR5sQ1zLg17fTWW-a_em8sOTZkdqlROCDDsvC-2VSMu5Q
+Message-ID: <CAFP+6-9RLowJnyNdMb+v1ZsFp5L2z87tEFoiePC08Lk0=aDLNA@mail.gmail.com>
+Subject: Detected unusual login activity on your online banking account
+To: aditay.kamble@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000005994eb06361d88c8"
+
+--0000000000005994eb06361d88c8
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Valued Customer,
+
+We have detected unusual login activity on your online banking account. For
+your protection, we have temporarily suspended certain functionalities to
+prevent any unauthorized transactions.
+
+Details of Suspicious Activity:
+
+   -
+
+   Date: 2025-05-27.
+
+
+   -
+
+   Time: 11:00  AM.
+
+
+   -
+
+   Location: Pune, India.
+
+To reactivate your account and verify your recent activity, you are
+required to immediately click on the secure link below and follow the
+instructions:
+
+Verify Your Account Now
+<https://www.google.com/url?sa=E&source=gmail&q=http://www.secure-bank-login.info/verify?id=user123456>
+
+
+Important: If you do not verify your account within 24 hours, your online
+access will be permanently locked, and you may need to visit a branch to
+regain access.
+
+We are committed to maintaining the highest security standards for your
+account. Thank you for your prompt attention to this matter.
+
+Sincerely,
+
+The Security Department,
+
+Global Trust Bank,
+
+Customer Support.
+
+--0000000000005994eb06361d88c8
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail-OutlineElement gmail-Ltr gmail-SCXW207=
+054085 gmail-BCX0" style=3D"margin:0px;padding:0px;clear:both;overflow:visi=
+ble;direction:ltr;color:rgb(0,0,0);font-family:&quot;Segoe UI&quot;,&quot;S=
+egoe UI Web&quot;,Arial,Verdana,sans-serif;font-size:12px"><p class=3D"gmai=
+l-Paragraph gmail-SCXW207054085 gmail-BCX0" lang=3D"EN-US" style=3D"margin:=
+0px 0px 0px 48px;padding:5.33333px;border-left:0.666667px solid rgb(0,0,0);=
+border-right:0.666667px solid rgb(0,0,0);vertical-align:baseline;font-kerni=
+ng:none;background-color:transparent;color:windowtext;text-align:justify"><=
+span lang=3D"EN-US" class=3D"gmail-TextRun gmail-SCXW207054085 gmail-BCX0" =
+style=3D"margin:0px;padding:0px;font-size:12pt;line-height:20.925px;font-fa=
+mily:&quot;Times New Roman&quot;,&quot;Times New Roman_EmbeddedFont&quot;,&=
+quot;Times New Roman_MSFontService&quot;,serif;font-variant-ligatures:none"=
+><span class=3D"gmail-NormalTextRun gmail-SCXW207054085 gmail-BCX0" style=
+=3D"margin:0px;padding:0px">Dear Valued Customer,</span></span><span class=
+=3D"gmail-EOP gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:0=
+px;font-size:12pt;line-height:20.925px;font-family:&quot;Times New Roman&qu=
+ot;,&quot;Times New Roman_EmbeddedFont&quot;,&quot;Times New Roman_MSFontSe=
+rvice&quot;,serif">=C2=A0</span></p></div><div class=3D"gmail-OutlineElemen=
+t gmail-Ltr gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:0px=
+;clear:both;overflow:visible;direction:ltr;color:rgb(0,0,0);font-family:&qu=
+ot;Segoe UI&quot;,&quot;Segoe UI Web&quot;,Arial,Verdana,sans-serif;font-si=
+ze:12px"><p class=3D"gmail-Paragraph gmail-SCXW207054085 gmail-BCX0" lang=
+=3D"EN-US" style=3D"margin:0px 0px 0px 48px;padding:5.33333px;border-left:0=
+.666667px solid rgb(0,0,0);border-right:0.666667px solid rgb(0,0,0);vertica=
+l-align:baseline;font-kerning:none;background-color:transparent;color:windo=
+wtext;text-align:justify"><span lang=3D"EN-US" class=3D"gmail-TextRun gmail=
+-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:0px;font-size:12pt;l=
+ine-height:20.925px;font-family:&quot;Times New Roman&quot;,&quot;Times New=
+ Roman_EmbeddedFont&quot;,&quot;Times New Roman_MSFontService&quot;,serif;f=
+ont-variant-ligatures:none"><span class=3D"gmail-NormalTextRun gmail-SCXW20=
+7054085 gmail-BCX0" style=3D"margin:0px;padding:0px">We have detected unusu=
+al login activity on your online banking account. For your protection, we h=
+ave </span><span class=3D"gmail-NormalTextRun gmail-AdvancedProofingIssueV2=
+Themed gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:0px;back=
+ground-position:0px 100%;background-repeat:repeat-x;background-image:url(&q=
+uot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwM=
+C9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSIyIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2=
+ZW5vZGQiPjxwYXRoIGQ9Ik0wIDBoMTB2MkgweiIvPjxwYXRoIHN0cm9rZT0iI0FEQTJGMiIgc3R=
+yb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiIGQ9Ik0xIDFoNCIvPjwvZz48L3=
+N2Zz4=3D&quot;);border-bottom:1px solid transparent">temporarily suspended<=
+/span><span class=3D"gmail-NormalTextRun gmail-SCXW207054085 gmail-BCX0" st=
+yle=3D"margin:0px;padding:0px"> certain functionalities to prevent any unau=
+thorized transactions.</span></span><span class=3D"gmail-EOP gmail-SCXW2070=
+54085 gmail-BCX0" style=3D"margin:0px;padding:0px;font-size:12pt;line-heigh=
+t:20.925px;font-family:&quot;Times New Roman&quot;,&quot;Times New Roman_Em=
+beddedFont&quot;,&quot;Times New Roman_MSFontService&quot;,serif">=C2=A0</s=
+pan></p></div><div class=3D"gmail-OutlineElement gmail-Ltr gmail-SCXW207054=
+085 gmail-BCX0" style=3D"margin:0px;padding:0px;clear:both;overflow:visible=
+;direction:ltr;color:rgb(0,0,0);font-family:&quot;Segoe UI&quot;,&quot;Sego=
+e UI Web&quot;,Arial,Verdana,sans-serif;font-size:12px"><p class=3D"gmail-P=
+aragraph gmail-SCXW207054085 gmail-BCX0" lang=3D"EN-US" style=3D"margin:0px=
+ 0px 28px 48px;padding:5.33333px;border-left:0.666667px solid rgb(0,0,0);bo=
+rder-right:0.666667px solid rgb(0,0,0);border-bottom:0.666667px solid rgb(0=
+,0,0);vertical-align:baseline;font-kerning:none;background-color:transparen=
+t;color:windowtext;text-align:justify"><span lang=3D"EN-US" class=3D"gmail-=
+TextRun gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:0px;fon=
+t-size:12pt;line-height:20.925px;font-family:&quot;Times New Roman&quot;,&q=
+uot;Times New Roman_EmbeddedFont&quot;,&quot;Times New Roman_MSFontService&=
+quot;,serif;font-weight:bold;font-variant-ligatures:none"><span class=3D"gm=
+ail-NormalTextRun gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0px;paddi=
+ng:0px">Details of Suspicious Activity:</span></span><span class=3D"gmail-E=
+OP gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:0px;font-siz=
+e:12pt;line-height:20.925px;font-family:&quot;Times New Roman&quot;,&quot;T=
+imes New Roman_EmbeddedFont&quot;,&quot;Times New Roman_MSFontService&quot;=
+,serif">=C2=A0</span></p></div><div class=3D"gmail-ListContainerWrapper gma=
+il-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:0px;color:rgb(0,0,=
+0);font-family:&quot;Segoe UI&quot;,&quot;Segoe UI Web&quot;,Arial,Verdana,=
+sans-serif;font-size:12px"><ul class=3D"gmail-BulletListStyle1 gmail-SCXW20=
+7054085 gmail-BCX0" role=3D"list" style=3D"margin:0px;padding:0px;font-fami=
+ly:verdana;overflow:visible"><li role=3D"listitem" class=3D"gmail-OutlineEl=
+ement gmail-Ltr gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0px 0px 0px=
+ 48px;padding:0px;clear:both;overflow:visible;direction:ltr;display:block;f=
+ont-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;Times New Roman=
+_MSFontService&quot;,serif;vertical-align:baseline"><p class=3D"gmail-Parag=
+raph gmail-SCXW207054085 gmail-BCX0" lang=3D"EN-US" style=3D"margin:0px;pad=
+ding:5.33333px;border-left:0.666667px solid rgb(0,0,0);border-right:0.66666=
+7px solid rgb(0,0,0);border-top:0.666667px solid rgb(0,0,0);vertical-align:=
+baseline;font-kerning:none;background-color:transparent;color:windowtext;te=
+xt-align:justify"><span lang=3D"EN-US" class=3D"gmail-TextRun gmail-SCXW207=
+054085 gmail-BCX0" style=3D"margin:0px;padding:0px;font-size:12pt;line-heig=
+ht:18px;font-family:&quot;Times New Roman&quot;,&quot;Times New Roman_Embed=
+dedFont&quot;,&quot;Times New Roman_MSFontService&quot;,serif;font-weight:b=
+old;font-variant-ligatures:none"><span class=3D"gmail-NormalTextRun gmail-S=
+CXW207054085 gmail-BCX0" style=3D"margin:0px;padding:0px">Date:</span></spa=
+n><span lang=3D"EN-US" class=3D"gmail-TextRun gmail-SCXW207054085 gmail-BCX=
+0" style=3D"margin:0px;padding:0px;font-size:12pt;line-height:18px;font-fam=
+ily:&quot;Times New Roman&quot;,&quot;Times New Roman_EmbeddedFont&quot;,&q=
+uot;Times New Roman_MSFontService&quot;,serif;font-variant-ligatures:none">=
+<span class=3D"gmail-NormalTextRun gmail-SCXW207054085 gmail-BCX0" style=3D=
+"margin:0px;padding:0px"> 2025-05-27</span><span class=3D"gmail-NormalTextR=
+un gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:0px">.</span=
+></span><span class=3D"gmail-EOP gmail-SCXW207054085 gmail-BCX0" style=3D"m=
+argin:0px;padding:0px;font-size:12pt;line-height:18px;font-family:&quot;Tim=
+es New Roman&quot;,&quot;Times New Roman_EmbeddedFont&quot;,&quot;Times New=
+ Roman_MSFontService&quot;,serif">=C2=A0</span></p></li></ul></div><div cla=
+ss=3D"gmail-ListContainerWrapper gmail-SCXW207054085 gmail-BCX0" style=3D"m=
+argin:0px;padding:0px;color:rgb(0,0,0);font-family:&quot;Segoe UI&quot;,&qu=
+ot;Segoe UI Web&quot;,Arial,Verdana,sans-serif;font-size:12px"><ul class=3D=
+"gmail-BulletListStyle1 gmail-SCXW207054085 gmail-BCX0" role=3D"list" style=
+=3D"margin:0px;padding:0px;font-family:verdana;overflow:visible"><li role=
+=3D"listitem" class=3D"gmail-OutlineElement gmail-Ltr gmail-SCXW207054085 g=
+mail-BCX0" style=3D"margin:0px 0px 0px 48px;padding:0px;clear:both;overflow=
+:visible;direction:ltr;display:block;font-size:12pt;font-family:&quot;Times=
+ New Roman&quot;,&quot;Times New Roman_MSFontService&quot;,serif;vertical-a=
+lign:baseline"><p class=3D"gmail-Paragraph gmail-SCXW207054085 gmail-BCX0" =
+lang=3D"EN-US" style=3D"margin:0px;padding:5.33333px;border-left:0.666667px=
+ solid rgb(0,0,0);border-right:0.666667px solid rgb(0,0,0);vertical-align:b=
+aseline;font-kerning:none;background-color:transparent;color:windowtext;tex=
+t-align:justify"><span lang=3D"EN-US" class=3D"gmail-TextRun gmail-SCXW2070=
+54085 gmail-BCX0" style=3D"margin:0px;padding:0px;font-size:12pt;line-heigh=
+t:18px;font-family:&quot;Times New Roman&quot;,&quot;Times New Roman_Embedd=
+edFont&quot;,&quot;Times New Roman_MSFontService&quot;,serif;font-weight:bo=
+ld;font-variant-ligatures:none"><span class=3D"gmail-NormalTextRun gmail-SC=
+XW207054085 gmail-BCX0" style=3D"margin:0px;padding:0px">Time:</span></span=
+><span lang=3D"EN-US" class=3D"gmail-TextRun gmail-SCXW207054085 gmail-BCX0=
+" style=3D"margin:0px;padding:0px;font-size:12pt;line-height:18px;font-fami=
+ly:&quot;Times New Roman&quot;,&quot;Times New Roman_EmbeddedFont&quot;,&qu=
+ot;Times New Roman_MSFontService&quot;,serif;font-variant-ligatures:none"><=
+span class=3D"gmail-NormalTextRun gmail-SCXW207054085 gmail-BCX0" style=3D"=
+margin:0px;padding:0px"> </span><span class=3D"gmail-NormalTextRun gmail-Co=
+ntextualSpellingAndGrammarErrorV2Themed gmail-SCXW207054085 gmail-BCX0" sty=
+le=3D"margin:0px;padding:0px;background-position:0px 100%;background-repeat=
+:repeat-x;background-image:url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxu=
+cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjMiPjxnIGZ=
+pbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjOTlBQUY1IiBzdHJva2UtbG=
+luZWNhcD0icm91bmQiPjxwYXRoIGQ9Ik0wIC41aDVNMCAyLjVoNSIvPjwvZz48L3N2Zz4=3D&qu=
+ot;);border-bottom:1px solid transparent">11:00 =C2=A0AM</span><span class=
+=3D"gmail-NormalTextRun gmail-ContextualSpellingAndGrammarErrorV2Themed gma=
+il-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:0px;background-pos=
+ition:0px 100%;background-repeat:repeat-x;background-image:url(&quot;data:i=
+mage/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHd=
+pZHRoPSI1IiBoZWlnaHQ9IjMiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3=
+Ryb2tlPSIjOTlBQUY1IiBzdHJva2UtbGluZWNhcD0icm91bmQiPjxwYXRoIGQ9Ik0wIC41aDVNM=
+CAyLjVoNSIvPjwvZz48L3N2Zz4=3D&quot;);border-bottom:1px solid transparent">.=
+</span></span><span class=3D"gmail-EOP gmail-SCXW207054085 gmail-BCX0" styl=
+e=3D"margin:0px;padding:0px;font-size:12pt;line-height:18px;font-family:&qu=
+ot;Times New Roman&quot;,&quot;Times New Roman_EmbeddedFont&quot;,&quot;Tim=
+es New Roman_MSFontService&quot;,serif">=C2=A0</span></p></li></ul></div><d=
+iv class=3D"gmail-ListContainerWrapper gmail-SCXW207054085 gmail-BCX0" styl=
+e=3D"margin:0px;padding:0px;color:rgb(0,0,0);font-family:&quot;Segoe UI&quo=
+t;,&quot;Segoe UI Web&quot;,Arial,Verdana,sans-serif;font-size:12px"><ul cl=
+ass=3D"gmail-BulletListStyle1 gmail-SCXW207054085 gmail-BCX0" role=3D"list"=
+ style=3D"margin:0px;padding:0px;font-family:verdana;overflow:visible"><li =
+role=3D"listitem" class=3D"gmail-OutlineElement gmail-Ltr gmail-SCXW2070540=
+85 gmail-BCX0" style=3D"margin:0px 0px 0px 48px;padding:0px;clear:both;over=
+flow:visible;direction:ltr;display:block;font-size:12pt;font-family:&quot;T=
+imes New Roman&quot;,&quot;Times New Roman_MSFontService&quot;,serif;vertic=
+al-align:baseline"><p class=3D"gmail-Paragraph gmail-SCXW207054085 gmail-BC=
+X0" lang=3D"EN-US" style=3D"margin:0px;padding:5.33333px;border-left:0.6666=
+67px solid rgb(0,0,0);border-right:0.666667px solid rgb(0,0,0);border-botto=
+m:0.666667px solid rgb(0,0,0);vertical-align:baseline;font-kerning:none;bac=
+kground-color:transparent;color:windowtext;text-align:justify"><span lang=
+=3D"EN-US" class=3D"gmail-TextRun gmail-SCXW207054085 gmail-BCX0" style=3D"=
+margin:0px;padding:0px;font-size:12pt;line-height:20.925px;font-family:&quo=
+t;Times New Roman&quot;,&quot;Times New Roman_EmbeddedFont&quot;,&quot;Time=
+s New Roman_MSFontService&quot;,serif;font-weight:bold;font-variant-ligatur=
+es:none"><span class=3D"gmail-NormalTextRun gmail-SCXW207054085 gmail-BCX0"=
+ style=3D"margin:0px;padding:0px">Location:</span></span><span lang=3D"EN-U=
+S" class=3D"gmail-TextRun gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0=
+px;padding:0px;font-size:12pt;line-height:20.925px;font-family:&quot;Times =
+New Roman&quot;,&quot;Times New Roman_EmbeddedFont&quot;,&quot;Times New Ro=
+man_MSFontService&quot;,serif;font-variant-ligatures:none"><span class=3D"g=
+mail-NormalTextRun gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padd=
+ing:0px"> </span><span class=3D"gmail-NormalTextRun gmail-SCXW207054085 gma=
+il-BCX0" style=3D"margin:0px;padding:0px">Pune, India.</span></span><span c=
+lass=3D"gmail-EOP gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0px;paddi=
+ng:0px;font-size:12pt;line-height:20.925px;font-family:&quot;Times New Roma=
+n&quot;,&quot;Times New Roman_EmbeddedFont&quot;,&quot;Times New Roman_MSFo=
+ntService&quot;,serif">=C2=A0</span></p></li></ul></div><div class=3D"gmail=
+-OutlineElement gmail-Ltr gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0=
+px;padding:0px;clear:both;overflow:visible;direction:ltr;color:rgb(0,0,0);f=
+ont-family:&quot;Segoe UI&quot;,&quot;Segoe UI Web&quot;,Arial,Verdana,sans=
+-serif;font-size:12px"><p class=3D"gmail-Paragraph gmail-SCXW207054085 gmai=
+l-BCX0" lang=3D"EN-US" style=3D"margin:12px 0px 0px 48px;padding:5.33333px;=
+border-left:0.666667px solid rgb(0,0,0);border-right:0.666667px solid rgb(0=
+,0,0);border-top:0.666667px solid rgb(0,0,0);vertical-align:baseline;font-k=
+erning:none;background-color:transparent;color:windowtext;text-align:justif=
+y"><span lang=3D"EN-US" class=3D"gmail-TextRun gmail-SCXW207054085 gmail-BC=
+X0" style=3D"margin:0px;padding:0px;font-size:12pt;line-height:20.925px;fon=
+t-family:&quot;Times New Roman&quot;,&quot;Times New Roman_EmbeddedFont&quo=
+t;,&quot;Times New Roman_MSFontService&quot;,serif;font-variant-ligatures:n=
+one"><span class=3D"gmail-NormalTextRun gmail-SCXW207054085 gmail-BCX0" sty=
+le=3D"margin:0px;padding:0px">To reactivate </span><span class=3D"gmail-Nor=
+malTextRun gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:0px"=
+>your accou</span><span class=3D"gmail-NormalTextRun gmail-SCXW207054085 gm=
+ail-BCX0" style=3D"margin:0px;padding:0px">nt and verify your recent activi=
+ty, you </span><span class=3D"gmail-NormalTextRun gmail-SCXW207054085 gmail=
+-BCX0" style=3D"margin:0px;padding:0px">are required to</span><span class=
+=3D"gmail-NormalTextRun gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0px=
+;padding:0px"> </span><span class=3D"gmail-NormalTextRun gmail-SCXW20705408=
+5 gmail-BCX0" style=3D"margin:0px;padding:0px">immediately</span><span clas=
+s=3D"gmail-NormalTextRun gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0p=
+x;padding:0px"> click on the secure link below and follow the instructions:=
+</span></span><span class=3D"gmail-EOP gmail-SCXW207054085 gmail-BCX0" styl=
+e=3D"margin:0px;padding:0px;font-size:12pt;line-height:20.925px;font-family=
+:&quot;Times New Roman&quot;,&quot;Times New Roman_EmbeddedFont&quot;,&quot=
+;Times New Roman_MSFontService&quot;,serif">=C2=A0</span></p></div><div cla=
+ss=3D"gmail-OutlineElement gmail-Ltr gmail-SCXW207054085 gmail-BCX0" style=
+=3D"margin:0px;padding:0px;clear:both;overflow:visible;direction:ltr;color:=
+rgb(0,0,0);font-family:&quot;Segoe UI&quot;,&quot;Segoe UI Web&quot;,Arial,=
+Verdana,sans-serif;font-size:12px"><p class=3D"gmail-Paragraph gmail-SCXW20=
+7054085 gmail-BCX0" lang=3D"EN-US" style=3D"margin:0px 0px 0px 48px;padding=
+:5.33333px;border-left:0.666667px solid rgb(0,0,0);border-right:0.666667px =
+solid rgb(0,0,0);vertical-align:baseline;font-kerning:none;background-color=
+:transparent;color:windowtext;text-align:justify"><span lang=3D"EN-US" clas=
+s=3D"gmail-TextRun gmail-EmptyTextRun gmail-SCXW207054085 gmail-BCX0" style=
+=3D"margin:0px;padding:0px;font-size:12pt;line-height:20.925px;font-family:=
+Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,sans-serif;font-variant-ligatu=
+res:none"></span><a class=3D"gmail-Hyperlink gmail-SCXW207054085 gmail-BCX0=
+" href=3D"https://www.google.com/url?sa=3DE&amp;source=3Dgmail&amp;q=3Dhttp=
+://www.secure-bank-login.info/verify?id=3Duser123456" target=3D"_blank" rel=
+=3D"noreferrer noopener" style=3D"margin:0px;padding:0px;text-decoration-li=
+ne:none;color:inherit"><span lang=3D"EN-US" class=3D"gmail-TextRun gmail-Un=
+derlined gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:0px;co=
+lor:rgb(70,120,134);font-size:12pt;text-decoration-line:underline;line-heig=
+ht:20.925px;font-family:&quot;Times New Roman&quot;,&quot;Times New Roman_E=
+mbeddedFont&quot;,&quot;Times New Roman_MSFontService&quot;,serif;font-weig=
+ht:bold;font-variant-ligatures:none"><span class=3D"gmail-NormalTextRun gma=
+il-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:0px">Verify Your A=
+ccount Now</span></span></a><span lang=3D"EN-US" class=3D"gmail-TextRun gma=
+il-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:0px;font-size:12pt=
+;line-height:20.925px;font-family:&quot;Times New Roman&quot;,&quot;Times N=
+ew Roman_EmbeddedFont&quot;,&quot;Times New Roman_MSFontService&quot;,serif=
+;font-variant-ligatures:none"><span class=3D"gmail-NormalTextRun gmail-SCXW=
+207054085 gmail-BCX0" style=3D"margin:0px;padding:0px"> </span></span><span=
+ class=3D"gmail-EOP gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0px;pad=
+ding:0px;font-size:12pt;line-height:20.925px;font-family:&quot;Times New Ro=
+man&quot;,&quot;Times New Roman_EmbeddedFont&quot;,&quot;Times New Roman_MS=
+FontService&quot;,serif">=C2=A0</span></p></div><div class=3D"gmail-Outline=
+Element gmail-Ltr gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0px;paddi=
+ng:0px;clear:both;overflow:visible;direction:ltr;color:rgb(0,0,0);font-fami=
+ly:&quot;Segoe UI&quot;,&quot;Segoe UI Web&quot;,Arial,Verdana,sans-serif;f=
+ont-size:12px"><p class=3D"gmail-Paragraph gmail-SCXW207054085 gmail-BCX0" =
+lang=3D"EN-US" style=3D"margin:0px 0px 0px 48px;padding:5.33333px;border-le=
+ft:0.666667px solid rgb(0,0,0);border-right:0.666667px solid rgb(0,0,0);ver=
+tical-align:baseline;font-kerning:none;background-color:transparent;color:w=
+indowtext;text-align:justify"><span lang=3D"EN-US" class=3D"gmail-TextRun g=
+mail-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:0px;font-size:12=
+pt;line-height:20.925px;font-family:&quot;Times New Roman&quot;,&quot;Times=
+ New Roman_EmbeddedFont&quot;,&quot;Times New Roman_MSFontService&quot;,ser=
+if;font-weight:bold;font-variant-ligatures:none"><span class=3D"gmail-Norma=
+lTextRun gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:0px">I=
+mportant:</span></span><span lang=3D"EN-US" class=3D"gmail-TextRun gmail-SC=
+XW207054085 gmail-BCX0" style=3D"margin:0px;padding:0px;font-size:12pt;line=
+-height:20.925px;font-family:&quot;Times New Roman&quot;,&quot;Times New Ro=
+man_EmbeddedFont&quot;,&quot;Times New Roman_MSFontService&quot;,serif;font=
+-variant-ligatures:none"><span class=3D"gmail-NormalTextRun gmail-SCXW20705=
+4085 gmail-BCX0" style=3D"margin:0px;padding:0px"> If you do not verify you=
+r account within 24 hours, your online access will be permanently locked, a=
+nd you may need to visit a branch to regain access.</span></span><span clas=
+s=3D"gmail-EOP gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:=
+0px;font-size:12pt;line-height:20.925px;font-family:&quot;Times New Roman&q=
+uot;,&quot;Times New Roman_EmbeddedFont&quot;,&quot;Times New Roman_MSFontS=
+ervice&quot;,serif">=C2=A0</span></p></div><div class=3D"gmail-OutlineEleme=
+nt gmail-Ltr gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:0p=
+x;clear:both;overflow:visible;direction:ltr;color:rgb(0,0,0);font-family:&q=
+uot;Segoe UI&quot;,&quot;Segoe UI Web&quot;,Arial,Verdana,sans-serif;font-s=
+ize:12px"><p class=3D"gmail-Paragraph gmail-SCXW207054085 gmail-BCX0" lang=
+=3D"EN-US" style=3D"margin:0px 0px 0px 48px;padding:5.33333px;border-left:0=
+.666667px solid rgb(0,0,0);border-right:0.666667px solid rgb(0,0,0);vertica=
+l-align:baseline;font-kerning:none;background-color:transparent;color:windo=
+wtext;text-align:justify"><span lang=3D"EN-US" class=3D"gmail-TextRun gmail=
+-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:0px;font-size:12pt;l=
+ine-height:20.925px;font-family:&quot;Times New Roman&quot;,&quot;Times New=
+ Roman_EmbeddedFont&quot;,&quot;Times New Roman_MSFontService&quot;,serif;f=
+ont-variant-ligatures:none"><span class=3D"gmail-NormalTextRun gmail-SCXW20=
+7054085 gmail-BCX0" style=3D"margin:0px;padding:0px">We are committed to </=
+span><span class=3D"gmail-NormalTextRun gmail-SCXW207054085 gmail-BCX0" sty=
+le=3D"margin:0px;padding:0px">maintaining</span><span class=3D"gmail-Normal=
+TextRun gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:0px"> t=
+he highest security standards for your account. Thank you for your prompt a=
+ttention to this matter.</span></span><span class=3D"gmail-EOP gmail-SCXW20=
+7054085 gmail-BCX0" style=3D"margin:0px;padding:0px;font-size:12pt;line-hei=
+ght:20.925px;font-family:&quot;Times New Roman&quot;,&quot;Times New Roman_=
+EmbeddedFont&quot;,&quot;Times New Roman_MSFontService&quot;,serif">=C2=A0<=
+/span></p></div><div class=3D"gmail-OutlineElement gmail-Ltr gmail-SCXW2070=
+54085 gmail-BCX0" style=3D"margin:0px;padding:0px;clear:both;overflow:visib=
+le;direction:ltr;color:rgb(0,0,0);font-family:&quot;Segoe UI&quot;,&quot;Se=
+goe UI Web&quot;,Arial,Verdana,sans-serif;font-size:12px"><p class=3D"gmail=
+-Paragraph gmail-SCXW207054085 gmail-BCX0" lang=3D"EN-US" style=3D"margin:0=
+px 0px 0px 48px;padding:5.33333px;border-left:0.666667px solid rgb(0,0,0);b=
+order-right:0.666667px solid rgb(0,0,0);vertical-align:baseline;font-kernin=
+g:none;background-color:transparent;color:windowtext;text-align:justify"><s=
+pan lang=3D"EN-US" class=3D"gmail-TextRun gmail-SCXW207054085 gmail-BCX0" s=
+tyle=3D"margin:0px;padding:0px;font-size:12pt;line-height:20.925px;font-fam=
+ily:&quot;Times New Roman&quot;,&quot;Times New Roman_EmbeddedFont&quot;,&q=
+uot;Times New Roman_MSFontService&quot;,serif;font-variant-ligatures:none">=
+<span class=3D"gmail-NormalTextRun gmail-SCXW207054085 gmail-BCX0" style=3D=
+"margin:0px;padding:0px">Sincerely,</span></span><span class=3D"gmail-EOP g=
+mail-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:0px;font-size:12=
+pt;line-height:20.925px;font-family:&quot;Times New Roman&quot;,&quot;Times=
+ New Roman_EmbeddedFont&quot;,&quot;Times New Roman_MSFontService&quot;,ser=
+if">=C2=A0</span></p></div><div class=3D"gmail-OutlineElement gmail-Ltr gma=
+il-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:0px;clear:both;ove=
+rflow:visible;direction:ltr;color:rgb(0,0,0);font-family:&quot;Segoe UI&quo=
+t;,&quot;Segoe UI Web&quot;,Arial,Verdana,sans-serif;font-size:12px"><p cla=
+ss=3D"gmail-Paragraph gmail-SCXW207054085 gmail-BCX0" lang=3D"EN-US" style=
+=3D"margin:0px 0px 0px 48px;padding:5.33333px;border-left:0.666667px solid =
+rgb(0,0,0);border-right:0.666667px solid rgb(0,0,0);vertical-align:baseline=
+;font-kerning:none;background-color:transparent;color:windowtext;text-align=
+:justify"><span lang=3D"EN-US" class=3D"gmail-TextRun gmail-SCXW207054085 g=
+mail-BCX0" style=3D"margin:0px;padding:0px;font-size:12pt;line-height:20.92=
+5px;font-family:&quot;Times New Roman&quot;,&quot;Times New Roman_EmbeddedF=
+ont&quot;,&quot;Times New Roman_MSFontService&quot;,serif;font-variant-liga=
+tures:none"><span class=3D"gmail-NormalTextRun gmail-SCXW207054085 gmail-BC=
+X0" style=3D"margin:0px;padding:0px">The Security Department</span><span cl=
+ass=3D"gmail-NormalTextRun gmail-SCXW207054085 gmail-BCX0" style=3D"margin:=
+0px;padding:0px">,</span><span class=3D"gmail-NormalTextRun gmail-SCXW20705=
+4085 gmail-BCX0" style=3D"margin:0px;padding:0px"> </span></span><span clas=
+s=3D"gmail-EOP gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:=
+0px;font-size:12pt;line-height:20.925px;font-family:&quot;Times New Roman&q=
+uot;,&quot;Times New Roman_EmbeddedFont&quot;,&quot;Times New Roman_MSFontS=
+ervice&quot;,serif">=C2=A0</span></p></div><div class=3D"gmail-OutlineEleme=
+nt gmail-Ltr gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:0p=
+x;clear:both;overflow:visible;direction:ltr;color:rgb(0,0,0);font-family:&q=
+uot;Segoe UI&quot;,&quot;Segoe UI Web&quot;,Arial,Verdana,sans-serif;font-s=
+ize:12px"><p class=3D"gmail-Paragraph gmail-SCXW207054085 gmail-BCX0" lang=
+=3D"EN-US" style=3D"margin:0px 0px 0px 48px;padding:5.33333px;border-left:0=
+.666667px solid rgb(0,0,0);border-right:0.666667px solid rgb(0,0,0);vertica=
+l-align:baseline;font-kerning:none;background-color:transparent;color:windo=
+wtext;text-align:justify"><span lang=3D"EN-US" class=3D"gmail-TextRun gmail=
+-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:0px;font-size:12pt;l=
+ine-height:20.925px;font-family:&quot;Times New Roman&quot;,&quot;Times New=
+ Roman_EmbeddedFont&quot;,&quot;Times New Roman_MSFontService&quot;,serif;f=
+ont-variant-ligatures:none"><span class=3D"gmail-NormalTextRun gmail-SCXW20=
+7054085 gmail-BCX0" style=3D"margin:0px;padding:0px">Global Trust Bank</spa=
+n><span class=3D"gmail-NormalTextRun gmail-SCXW207054085 gmail-BCX0" style=
+=3D"margin:0px;padding:0px">,</span><span class=3D"gmail-NormalTextRun gmai=
+l-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:0px"> </span></span=
+><span class=3D"gmail-EOP gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0=
+px;padding:0px;font-size:12pt;line-height:20.925px;font-family:&quot;Times =
+New Roman&quot;,&quot;Times New Roman_EmbeddedFont&quot;,&quot;Times New Ro=
+man_MSFontService&quot;,serif">=C2=A0</span></p></div><div class=3D"gmail-O=
+utlineElement gmail-Ltr gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0px=
+;padding:0px;clear:both;overflow:visible;direction:ltr;color:rgb(0,0,0);fon=
+t-family:&quot;Segoe UI&quot;,&quot;Segoe UI Web&quot;,Arial,Verdana,sans-s=
+erif;font-size:12px"><p class=3D"gmail-Paragraph gmail-SCXW207054085 gmail-=
+BCX0" lang=3D"EN-US" style=3D"margin:0px 0px 22px 48px;padding:5.33333px;bo=
+rder-left:0.666667px solid rgb(0,0,0);border-right:0.666667px solid rgb(0,0=
+,0);border-bottom:0.666667px solid rgb(0,0,0);vertical-align:baseline;font-=
+kerning:none;background-color:transparent;color:windowtext;text-align:justi=
+fy"><span lang=3D"EN-US" class=3D"gmail-TextRun gmail-SCXW207054085 gmail-B=
+CX0" style=3D"margin:0px;padding:0px;font-size:12pt;line-height:20.925px;fo=
+nt-family:&quot;Times New Roman&quot;,&quot;Times New Roman_EmbeddedFont&qu=
+ot;,&quot;Times New Roman_MSFontService&quot;,serif;font-variant-ligatures:=
+none"><span class=3D"gmail-NormalTextRun gmail-SCXW207054085 gmail-BCX0" st=
+yle=3D"margin:0px;padding:0px">Customer Support</span><span class=3D"gmail-=
+NormalTextRun gmail-SCXW207054085 gmail-BCX0" style=3D"margin:0px;padding:0=
+px">.</span></span><span class=3D"gmail-EOP gmail-SCXW207054085 gmail-BCX0"=
+ style=3D"margin:0px;padding:0px;font-size:12pt;line-height:20.925px;font-f=
+amily:&quot;Times New Roman&quot;,&quot;Times New Roman_EmbeddedFont&quot;,=
+&quot;Times New Roman_MSFontService&quot;,serif">=C2=A0</span></p></div></d=
+iv>
